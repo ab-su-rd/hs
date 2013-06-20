@@ -66,3 +66,6 @@ data BTree a =
 	Node a (BTree a) (BTree a)
 	| Empty
 	deriving (Show)
+
+fromList [] = Nil
+fromList (x:xs) = Cons x (fromList xs)
